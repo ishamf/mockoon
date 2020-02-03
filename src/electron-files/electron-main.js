@@ -259,14 +259,20 @@ function createWindow() {
           mainWindow.webContents.send('keydown', { action: 'IMPORT_FILE' });
         }
       },
-      { type: 'separator' },
       {
         label: 'Export all environments to a file (JSON)',
         accelerator: 'CmdOrCtrl+O',
         click: function() {
           mainWindow.webContents.send('keydown', { action: 'EXPORT_FILE' });
         }
-      }
+      },
+      { type: 'separator' },
+      {
+        label: 'Import OpenAPI file (v2/v3, JSON, YAML)',
+        click: function() {
+          mainWindow.webContents.send('keydown', { action: 'IMPORT_OPENAPI_FILE' });
+        }
+      },
     ]
   });
 

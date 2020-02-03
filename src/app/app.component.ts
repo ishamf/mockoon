@@ -133,6 +133,9 @@ export class AppComponent implements OnInit {
         case 'IMPORT_FILE':
           this.importExportService.importFromFile();
           break;
+        case 'IMPORT_OPENAPI_FILE':
+          this.importExportService.importOpenAPIFile();
+          break;
         case 'IMPORT_CLIPBOARD':
           this.importExportService.importFromClipboard();
           break;
